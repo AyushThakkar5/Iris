@@ -63,14 +63,16 @@ async def predict_species(iris: IrisRequest):
     try:
         # Convert input data to numpy array
         features = np.array([[iris.sepalLength, iris.sepalWidth, iris.petalLength, iris.petalWidth]])
-
+        print(features)
         # Make prediction
         prediction = model.predict(features)[0]
+        print(prediction)
 
         # Return prediction as JSON
         return JSONResponse(content={"prediction": prediction})
 
     except Exception as e:
+        print(e)
         return JSONResponse(content={"error": str(e)}, status_code=500)
 
 @app.get("/list-files")
