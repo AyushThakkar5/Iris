@@ -2,3 +2,8 @@ fastapi
 uvicorn
 pydantic
 numpy
+pandas
+seaborn
+warnings
+matplotlib
+sklearn
