@@ -193,7 +193,7 @@ if (document.getElementById("iris-form")) {
             '<div class="loading"><i class="fas fa-spinner fa-spin"></i> Analyzing...</div>';
 
         // Send data to backend
-        fetch('/predict', {
+        fetch('https://iris-lxrg.onrender.com/predict', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
